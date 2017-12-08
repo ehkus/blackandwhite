@@ -1,0 +1,12 @@
+{
+  "name": "Changing Web Page Colors",
+  "manifest_version": 2,
+  "version": "0.1",
+  "description": "Changes web page colors",
+  "content_scripts": [
+    {
+	"matches": ["<all_urls>"],
+	"css": ["myExtensionRulz.css"]
+    }
+  ]
+}
