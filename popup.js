@@ -3,4 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     enableButton.addEventListener("click", () => {
 	chrome.tabs.insertCSS({file:"blackandwhite.css"});
     });
+    var disableButton = document.getElementById("disable");
+    disableButton.addEventListener("click", () => {
+	var rel = "window.location.reload();";
+	chrome.tabs.executeScript({code: rel});
+	window.close();
+    });
 });
